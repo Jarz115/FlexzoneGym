@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="FlexZone Gym - Achieve More, Become More.">
+    <title>FlexZone Gym - Home</title>
+    <link rel="stylesheet" href="css/style.css">
+   
+</head>
+
+<body>
+
+    <header>
+        <div class="logo-container">
+            <img src="img/FlexLogo.png" alt="FlexZone Gym Logo" width="75" height="75">
+            <h2>FlexZone Gym</h2>
+        </div>
+        
+        <!-- Navigation Bar -->
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="classes.html">Classes</a></li>
+                <li><a href="membership.html">Membership</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <!-- Special Offer Banner -->
+    <div class="special-offer">
+        🔥 Limited Time Offer: Get 20% Off Your First Membership! 🔥
+        <a href="contact.html" class="claim-button">Claim Now</a>
+    </div>
+
+    <div class="content">
+        <!-- Slideshow Images for Homepage -->
+        <section class="hero">
+            <div class="slideshow">
+                <img src="img/home1.jpg" class="slide active" alt="Spacious gym with modern workout equipment">
+                <img src="img/home2.jpg" class="slide" alt="People engaged in strength training in a gym">
+                <img src="img/home3.jpg" class="slide" alt="Treadmills and cardio machines in a high-tech gym">
+            </div>
+            <div class="hero-text">
+                <h1>Achieve More, Become More</h1>
+                <p>No Limits, Just Results</p>
+            </div>
+        </section>
+
+        <!-- About Text below slideshow-->
+        <section class="about">
+            <h2>Welcome to FlexZone Gym</h2>
+            <p>FlexZone is the Gym of The Future! Train with the best equipment, join expert-led classes, and be part of an inspiring fitness community.</p>
+        </section>
+    </div>
+
+    <!-- footer repeated on every page -->
+    <footer>
+        <p>&copy; 2025 FlexZone Gym | All Rights Reserved</p>
+        <div class="social-media">
+            <a href="https://facebook.com" target="_blank" aria-label="Visit our Facebook page">Facebook</a>
+            <a href="https://instagram.com" target="_blank" aria-label="Visit our Instagram page">Instagram</a>
+            <a href="https://twitter.com" target="_blank" aria-label="Visit our Twitter page">Twitter</a>
+        </div>
+    </footer>
+
+    <!-- Slideshow script-->
+    <script>
+        let slides = document.querySelectorAll(".slide");
+        let currentIndex = 0;
+
+        function changeSlide() {
+            slides[currentIndex].classList.remove("active");
+            currentIndex = (currentIndex + 1) % slides.length;
+            slides[currentIndex].classList.add("active");
+        }
+
+        setInterval(changeSlide, 2000); // Changes image every 2 seconds
+    </script>
+
+</body>
+</html>
